@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="Stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <figcaption style="float :right"   >
+        <img src="Logo-png-image2.jpg" alt="mypict" width="80" height="80"  >
+    </figcaption>
+    
+    <nav class="ne">
+       <ul>
+       
+        <li id="menu-item-1"> <a href="resources.html" target="_blank" >المصادر</a></li>
+        <li id="menu-item-1"> <a href="reviews.html" target="_blank">التقييمات  </a></li>
+        <li id="menu-item-1"><a href="contact.html"  target="_blank " > اتصل بنا </a></li>
+       <li id="menu-item-1"> <a href="about.html" target="_blank"  >  من نحن </a></li>
+       <li id="menu-item-1"><a href="products.html" target="_blank" >  الخدمات </a></li>
+       <li id="menu-item-1"><a href="index.html" target="_blank" >الصفحة الرئيسية  </a></li>
+    </ul>
+    </nav>
+    
+
+   
+   
+    <form  >
+        <label for="weight">Weight (kg): </label>
+        <input type="number" id="weight" name="weight" step="0.1" required><br><br>
+    
+        <label for="height">Height (cm): </label>
+        <input type="number" id="height" name="height" step="1" required><br><br>
+    
+        <p>Gender:</p>
+        <p>
+          <input type="radio" name="gender" value="Male" required style="margin: 10px;">
+          Male
+        </p>
+        <p>
+          <input type="radio" name="gender" value="Female" required style="margin: 10px;">
+          Female
+        </p>
+    
+        <p>Lifestyle:</p>
+        <div style="display: flex;margin: 10px">
+          <p>
+            <input type="checkbox" name="lifestyle" value="Active" required style="margin: 10px;">
+            Active
+          </p>
+          <p>
+            <input type="checkbox" name="lifestyle" value="Sedentary" required style="margin: 10px;">
+            Sedentary
+          </p>
+        </div>
+    
+        <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+    </form>
+        <div id="bmi-result"></div>
+        <textarea id="result" rows="5" style="margin-top: 20px; width: 180px;"></textarea>
+      
+
+    
+
+
+    
+    </div>
+</body>
+</html>

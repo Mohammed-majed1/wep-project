@@ -1,0 +1,97 @@
+
+/* style index      */
+h5{color: brown; text-align: center;}
+a:link,a:visited{color:white} 
+a:hover{color:blue;}
+a:active{color:purple; text-align: right; } 
+.ne{text-align: center; background-color:darkblue }
+.ne2{background-position: right; }
+#l1{display: inline-block ;margin:15px ;text-align:center; }
+.search-box {  width: 400px; height: 40px;font-size: larger;  display: inline-block;text-align: right; }
+.search-box2{height: 45px; width: 50px;font-size: larger;display: inline-block;}
+.search-box-container {text-align: center;} 
+/*---------------------------------------------------------------*/
+
+/* Stules for contact.html        */
+a:link,a:visited{color:white} 
+a:hover{color:blue;}
+a:link,a[href="mailto:example@example.com"]:visited{color: #1b4ec3;}
+a[href="mailto:example@example.com"]:hover {color:purple;}
+a:active{color:purple; text-align: right; } 
+.ne{text-align: center; background-color:darkblue }
+#menu-item-1{display: inline-block ;margin:15px ;text-align:center; }
+#li{text-align:right; font-size:large;}
+h1{text-align: center;}
+.contact-abc{justify-content: center;margin-bottom: 20px;}
+.contact{display: flex; justify-content: center; }
+.contact-form { max-width:360px ;margin: auto;}    
+.contact-form label {display:block;margin-bottom: 10px; text-align: right;}
+.contact-form input{width:100% ; padding: 10px; margin-bottom: 15px;}
+.contact-form textarea {width: 100%;padding: 10px;margin-bottom: 15px;}
+.fig{width: 720px;height: 100px; background-color: white;margin: auto; }
+.body{background-color: rgb(233, 238, 238);}
+#para2{margin-right: 20px; }
+
+/*----------------------------------------------------------------*/
+
+/* style Reviews  */
+
+a:link,a:visited{color:white} 
+a:hover{color:blue;}
+a:active{color:purple; text-align: right; } 
+.ne{text-align: center; background-color:darkblue }
+#l1{display: inline-block ;margin:15px ;text-align:center; }
+.in{text-align:center;}
+.contact-form { max-width:360px ;margin: auto;}    
+.contact-form label {display:block;margin-bottom: 10px; text-align: right;}
+.contact-form input{width:100% ; padding: 10px; margin-bottom: 15px;}
+.contact-form textarea {width: 100%;padding: 10px;margin-bottom: 15px;}
+.contact-form input[type="submit"] {  width: 360px;height: 40px;background-color: limegreen;color: white;border: none;font-size: 16px;cursor: pointer;}
+.contact-form input[type="radio"]{background-color: green;}
+#date-time-display { font-size: 16px; font-weight: bold;color: #333; text-align: right;margin-bottom: 10px;}
+/*---------------------------------------------------------------------*/
+
+/*  style about */
+
+a:link,a:visited{color:white} 
+a:hover{color:blue;}
+a:active{color:purple; text-align: right; } 
+.ne{text-align: center; background-color:darkblue }
+.ne2{background-position: right; }
+#l1{display: inline-block ;margin:15px ;text-align:center; }
+#par1{font-size:larger; text-align: right;}
+#h{text-align: right; font-size: xx-large;}
+#ul1{direction:rtl }
+#li{text-align:right; font-size:large;}
+  
+  /*------------------------------------*/
+
+  /* Styles for product.html */
+  a:link,a:visited{color:white} 
+  a:hover{color:blue;}
+  a:active{color:purple; text-align: right; } 
+  .ne{text-align: center; background-color:darkblue }
+  .ne2{background-position: right; }
+  #l1{display: inline-block ;margin:15px ;text-align:center; }
+  .search-box {  width: 400px; height: 40px;font-size: larger;  display: inline-block;text-align: right; }
+  .search-box2{height: 45px; width: 50px;font-size: larger;display: inline-block;}
+  .search-box-container {text-align: center; margin-top: 50px;} 
+  .div{ display: flex; justify-content: space-between}
+  .fig-size {width: 300px; height: 340px;margin-top: 50px; background-color: white;}
+  #img{width: 100%;height: 50%;}
+  .body{background-color: rgb(233, 238, 238);}
+  #para1{text-align: right; font-size: large;}
+  #h{text-align: right;}
+  .but{float: right; margin: 5px;}
+
+/*--------------------------------*/
+
+  /* Stules for resources.html */
+
+  a:link,a:visited{color:white} 
+a:hover{color:blue;}
+a:active{color:purple; text-align: right; } 
+.ne{text-align: center; background-color:darkblue }
+.ne2{background-position: right; }
+#l1{display: inline-block ;margin:15px ;text-align:center; }
+.fig{width: 720px;height: 480px; background-color: white;margin: auto; }

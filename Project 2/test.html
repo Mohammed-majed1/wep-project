@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="Stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <figcaption style="float :right"   >
+        <img src="Logo-png-image2.jpg" alt="mypict" width="80" height="80"  >
+    </figcaption>
+    
+    <nav class="ne">
+       <ul>
+       
+        <li id="menu-item-1"> <a href="resources.html" target="_blank" >المصادر</a></li>
+        <li id="menu-item-1"> <a href="reviews.html" target="_blank">التقييمات  </a></li>
+        <li id="menu-item-1"><a href="contact.html"  target="_blank " > اتصل بنا </a></li>
+       <li id="menu-item-1"> <a href="about.html" target="_blank"  >  من نحن </a></li>
+       <li id="menu-item-1"><a href="products.html" target="_blank" >  الخدمات </a></li>
+       <li id="menu-item-1"><a href="Bmi.html" target="_blank" > حاسبة مؤشر كتلة الجسم BMI  </a></li>
+    </ul>
+    </nav>
+    
+
+   
+   
+    <form>
+        <label for="weight">Weight (kg): </label>
+        <input type="number" id="weight" name="weight" step="0.1" required><br><br>
+    
+        <label for="height">Height (cm): </label>
+        <input type="number" id="height" name="height" step="1" required><br><br>
+    
+        <p>Gender:</p>
+        <p>
+          <input type="radio" name="gender" value="Male" required style="margin: 10px;">
+          Male
+        </p>
+        <p>
+          <input type="radio" name="gender" value="Female" required style="margin: 10px;">
+          Female
+        </p>
+    
+        <p>Lifestyle:</p>
+        <div style="display: flex;margin: 10px">
+          <p>
+            <input type="checkbox" name="lifestyle" value="Active" required style="margin: 10px;">
+            Active
+          </p>
+          <p>
+            <input type="checkbox" name="lifestyle" value="Sedentary" required style="margin: 10px;">
+            Sedentary
+          </p>
+        </div>
+    
+        <button type="button" onclick="calculateBMI()">Calculate BMI</button>
+        <div id="bmi-result"></div>
+        <textarea id="result" rows="5" style="margin-top: 20px; width: 180px;"></textarea>
+      </form>
+
+    
+
+
+    
+    </div>
+
+    <script>
+      function calculateBMI() {
+  const form = document.getElementById("bmi-form");
+  var weight = parseFloat(document.getElementById("weight").value);
+  var height = parseFloat(document.getElementById("height").value);
+  var gender = document.querySelector('input[name="gender"]:checked')?.value;
+  var lifestyle = document.querySelector('input[name="lifestyle"]:checked')?.value;
+
+  if (weight <= 0) {
+    // Display an error message for weight
+    document.getElementById("weight").style.borderColor = "red";
+    document.getElementById("weightError").style.display = "block";
+    return;
+} else {
+    // Hide the error message for weight
+    document.getElementById("weight").style.borderColor = "initial";
+    document.getElementById("weightError").style.display = "none";
+}
+
+if (height <= 0) {
+    // Display an error message for height
+    document.getElementById("height").style.borderColor = "red";
+    document.getElementById("heightError").style.display = "block";
+    return;
+} else {
+    // Hide the error message for height
+    document.getElementById("height").style.borderColor = "initial";
+    document.getElementById("heightError").style.display = "none";
+}
+
+  height = height / 100; // convert height from centimeters to meters
+  var bmi = weight / (height * height);
+
+  var status = "";
+  if (bmi < 18.5) {
+    status = "Underweight";
+  } else if (bmi >= 18.5 && bmi < 24.9) {
+    status = "Normal";
+  } else if (bmi >= 25 && bmi < 29.9) {
+    status = "Overweight";
+  } else if (bmi >= 30) {
+    status = "Obese";
+  }
+
+  if (isNaN(weight) || isNaN(height) || gender == "" || lifestyle == "") {
+    alert("Please fill in all the required fields.");
+    return;
+  }
+  document.getElementById("bmi-result").textContent = "BMI: " + bmi.toFixed(2);
+  var result = "Weight: " + weight + " kg - Height: " + height + " m";
+  if (gender) {
+    result += " - Gender: " + gender;
+  }
+  if (lifestyle) {
+    result += " - Lifestyle: " + lifestyle;
+  }
+  result += " - BMI: " + bmi.toFixed(2) + " (" + status + ")";
+  document.getElementById("result").value = result;
+
+}
+    </script>
+</body>
+</html>
